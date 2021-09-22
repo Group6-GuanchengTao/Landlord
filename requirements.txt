@@ -1,0 +1,4 @@
+aiomysql~=0.0.21
+pyjwt~=2.1
+tornado~=6.0
+#uvloop~=0.12
