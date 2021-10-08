@@ -31,7 +31,7 @@ def database_url(url):
     }
 
 
-DATABASE = database_url(os.getenv('DATABASE_URL', 'mysql://scbmflfyvcca6t02:q7pyshtonwzl0inv@phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ec75y76mnx21m5bi'))
+DATABASE = database_url(os.getenv('DATABASE_URL', 'mysql://rldlkh7gtofr96fw:gmz1fnv9l4x8aj71@phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gi2lesou40igvimj'))
 
 LOGGING = {
     'version': 1,
