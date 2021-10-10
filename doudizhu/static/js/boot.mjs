@@ -136,7 +136,7 @@ export class MainMenu {
     }
 
     gotoRoom() {
-        this.state.start('Game', true, false, 1);
+        this.state.start('Game', true, false, 3);
     }
 
     gotoSetting() {
