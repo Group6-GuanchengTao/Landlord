@@ -1,7 +1,7 @@
 ## 斗地主 &nbsp;&nbsp;
 
 
-斗地主游戏，后端基于Python+Tornado+MySQL开发，前端 Phaser 引擎
+159356 Project, Team Member: Sixu Bao, Tianchuan Yu, chengxu Yu, Guancheng Tao
 
 **Dependencies**
 
