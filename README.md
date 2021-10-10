@@ -14,7 +14,7 @@
 
 Quick Start
 
-    git clone https://github.com/mailgyc/doudizhu
+    git clone 
     cd doudizhu
     mysql --user=root -p < schema.sql
     pip3 install -r requirements.txt
@@ -24,11 +24,7 @@ Quick Start
 
 
 Online Demo  
-<http://m.ihouser.com/>  
 
+https://fightlandlord.herokuapp.com/
 
-运行截图
-
-![](https://raw.githubusercontent.com/mailgyc/doudizhu/master/screenshot/a.png)
-![](https://raw.githubusercontent.com/mailgyc/doudizhu/master/screenshot/c.png)
-![](https://raw.githubusercontent.com/mailgyc/doudizhu/master/screenshot/d.png)
+The functions of online demo still have some problems. If everybody wants to give some advice, you can contact me or send email to 951517115@qq.com. 
