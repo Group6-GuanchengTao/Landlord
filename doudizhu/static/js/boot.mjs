@@ -1,4 +1,4 @@
-﻿
+
 function get(url, payload, callback) {
     http('GET', url, payload, callback);
 }
@@ -154,12 +154,23 @@ export class Login {
         bg.anchor.set(0.5, 0);
 
         this.game.add.plugin(PhaserInput.Plugin);
+
         const style = {
             font: '32px Arial', fill: '#000', width: 300, padding: 12,
             borderWidth: 1, borderColor: '#c8c8c8', borderRadius: 2,
-            textAlign: 'center', placeHolder: 'Please input the username'
+            textAlign: 'center', placeHolder: 'Input Username'
         };
+
+        const style2 = {
+
+            font: '32px Arial', fill: '#000', width: 300, padding: 12,
+            borderWidth: 1, borderColor: '#c8c8c8', borderRadius: 2,
+            textAlign: 'center', placeHolder: 'Input password'
+
+        };
+
         this.username = this.game.add.inputField((this.game.world.width - 300) / 2, this.game.world.centerY - 40, style);
+        this.password = this.game.add.inputField((this.game.world.width - 300) / 2, this.game.world.centerY + 40, style2);
 
         this.errorText = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 24, '', {
             font: "24px Arial",
@@ -168,20 +179,23 @@ export class Login {
         });
         this.errorText.anchor.set(0.5, 0);
 
-        let login = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 100, 'btn', this.onLogin, this, 'login.png', 'login.png', 'login.png');
+
+
+        let login = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 150, 'btn', this.onLogin, this, 'login.png', 'login.png', 'login.png');
         login.anchor.set(0.5);
     }
 
     onLogin() {
         this.errorText.text = '';
-        if (!this.username.value) {
+        if (!this.username.value % !this.username.value) {
             this.username.startFocus();
-            this.errorText.text = 'input username';
+            this.errorText.text = 'wrong username or password';
             return;
         }
         let that = this;
         const payload = {
             "username": this.username.value,
+            "password": this.password.value,
         };
         post('/login', payload, function (status, response) {
             if (status === 200) {
